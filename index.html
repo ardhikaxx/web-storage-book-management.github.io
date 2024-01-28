@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Manajemen Buku</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Manajemen Buku</h1>
+        <div id="book-form">
+            <label for="title">Judul Buku:</label>
+            <input type="text" id="title" placeholder="Masukkan judul buku">
+
+            <label for="author">Penulis:</label>
+            <input type="text" id="author" placeholder="Masukkan penulis buku">
+
+            <label for="status">Status:</label>
+            <select id="status">
+                <option value="belum">Belum selesai dibaca</option>
+                <option value="selesai">Selesai dibaca</option>
+            </select>
+
+            <button onclick="addBook()">Tambah Buku</button>
+        </div>
+
+        <div id="book-list">
+            <div class="book-shelf" id="belum-shelf">
+                <h2>Belum selesai dibaca</h2>
+                <ul id="belum-list"></ul>
+            </div>
+
+            <div class="book-shelf" id="selesai-shelf">
+                <h2>Selesai dibaca</h2>
+                <ul id="selesai-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
